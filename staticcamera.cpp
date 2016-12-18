@@ -156,7 +156,6 @@ bool StaticCamera::TranslateView(){
     //h3dSetNodeTransform( _cam, 0, 10, 0, -34 ,r, 0, 1, 1, 1 );
     //h3dRender( _cam );
 
-
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective( fieldOfView, aspectRatio, nearClip, farClip );
