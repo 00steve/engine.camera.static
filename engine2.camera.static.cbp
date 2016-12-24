@@ -8,27 +8,23 @@
 		<Build>
 			<Target title="Debug">
 				<Option output="../engine_test/assets/extensions/engine.camera.static.dll" prefix_auto="0" extension_auto="0" />
-				<Option object_output="obj/Debug/" />
+				<Option object_output="../engine_test/assets/extensions" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
-				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Wall" />
-					<Add option="-DBUILD_DLL" />
 					<Add option="-g" />
+					<Add option="-DBUILD_DLL" />
 				</Compiler>
 				<Linker>
 					<Add library="user32" />
 				</Linker>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/engine2" prefix_auto="1" extension_auto="1" />
-				<Option object_output="obj/Release/" />
+				<Option output="../engine_test/assets/extensions/engine.camera.static.dll" prefix_auto="0" extension_auto="0" />
+				<Option object_output="../engine.camera.static/obj/" />
 				<Option type="3" />
 				<Option compiler="gcc" />
-				<Option createDefFile="1" />
-				<Option createStaticLib="1" />
 				<Compiler>
 					<Add option="-Wall" />
 					<Add option="-DBUILD_DLL" />
@@ -40,27 +36,26 @@
 				</Linker>
 			</Target>
 		</Build>
+		<Compiler>
+			<Add option="-std=c++0x" />
+		</Compiler>
 		<Linker>
 			<Add library="opengl32" />
 			<Add library="glu32" />
+			<Add library="engine" />
 		</Linker>
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/assetlibrary/assetlibrary.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/assetlibrary/assetlibrary.h" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/double3.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/double3.h" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/node.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/node.h" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/nodemessage.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/nodemessage.h" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/stringutil.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/stringutil.h" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/core/varmap.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/graphics/camera.cpp" />
-		<Unit filename="C:/Program Files (x86)/CodeBlocks/MinGW/include/engine/graphics/camera.h" />
-		<Unit filename="main.cpp" />
-		<Unit filename="main.h" />
-		<Unit filename="staticcamera.cpp" />
-		<Unit filename="staticcamera.h" />
+		<Unit filename="main.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="main.h">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="staticcamera.cpp">
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="staticcamera.h">
+			<Option target="Release" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />
